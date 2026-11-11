@@ -18,6 +18,6 @@ void displayJobs(Job jobs[], int count);
 void fcfs(Job jobs[], int count);
 void roundRobin(Job jobs[], int count, int quantum);
 void priorityScheduling(Job jobs[], int count);
-
+void bankerAlgorithm(void);
 #endif
 

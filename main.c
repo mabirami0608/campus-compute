@@ -1,7 +1,7 @@
 
 #include <stdio.h>
 #include "campuscompute.h"
-
+#include <stdlib.h>
 void displayJobs(Job jobs[], int count) {
     if (count == 0) {
         printf("\nNo jobs available.\n");
@@ -40,7 +40,8 @@ int main() {
         printf("3. FCFS Scheduling\n");
         printf("4. Round Robin Scheduling\n");
         printf("5. Priority Scheduling\n");
-        printf("6. Exit\n");
+        printf("6. banker's algorithm\n");
+	printf("7.exit\n");
         printf("Enter choice: ");
 
         if (scanf("%d", &choice) != 1) {
@@ -116,10 +117,12 @@ int main() {
                     priorityScheduling(jobs, count);
                 break;
 
-            case 6:
-                printf("Exiting CampusCompute.\n");
-                return 0;
+	  case 6:
+		bankerAlgorithm();
+    		break;
 
+	  case 7:
+    		exit(0); 
             default:
                 printf("Invalid choice. Try again.\n");
         }
